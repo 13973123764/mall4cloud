@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.mall.dao.TestStockMapper">
+
+    <update id="decrStock">
+        UPDATE
+            `test_stock`
+        SET
+            prod_num = prod_num -1
+        WHERE
+            prod_id = #{prodId}
+    </update>
+
+</mapper>
